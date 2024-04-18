@@ -1,0 +1,19 @@
+<ul class="list-group">
+    <li *ngFor="let task of tasks" class="list-group-item d-flex justify-content-between align-items-center">
+      <div class="col">
+        <div class="input-group">
+          <input type="text" [(ngModel)]="task.title" name="taskName{{ task.id }}" class="form-control" placeholder="Task title">
+        </div>
+      </div>
+      <div class="col-auto">
+        <select [(ngModel)]="task.status" name="taskStatus{{ task.id }}" class="form-select mt-1">
+          <option value="incomplete">In Progress</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <button (click)="updateTask(task)" class="btn btn-primary btn-sm me-1">Update</button>
+        <button (click)="deleteTask(task.id)" class="btn btn-danger btn-sm">Delete</button>
+      </div>
+    </li>
+  </ul>

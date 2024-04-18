@@ -1,0 +1,22 @@
+
+  
+.list-group-item { 
+     margin-bottom: 20px;  
+     }
+  
+  .input-group {  
+      width: 100%; 
+     }
+  
+  .col {  
+      flex: 1;   
+    }
+  
+  .col-auto { 
+       flex: 0  auto;  
+       }
+  
+  .btn {   
+     margin-top: 5px;  
+     }
+  

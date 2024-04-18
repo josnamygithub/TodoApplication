@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Task } from 'src/ModelInterface/toDoModel';
+import { TaskserviceService } from './taskservice.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ToDoApplication';
+  
+  tasks: Task[] = [];
+
+  constructor(private taskService :TaskserviceService){
+    this.tasks=this.taskService.getTasks();
+    }
+
+
 }
+
